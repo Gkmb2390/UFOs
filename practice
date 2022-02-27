@@ -1,0 +1,5 @@
+// Printing in Javascript
+console.log("Hello, World!");
+
+# Printing in Python
+print('Hello World!')
