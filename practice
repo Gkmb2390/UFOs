@@ -3,3 +3,33 @@ console.log("Hello, World!");
 
 # Printing in Python
 print('Hello World!')
+
+
+// // Takes two numbers and adds them
+// function addition(a, b) {
+//     return a + b;
+//   }
+
+
+
+//   // Functions can call other functions
+// function doubleAddition(c, d) {
+//     var total = addition(c, d) * 2;
+//     return total;
+//   }
+
+
+// Converted to an arrow function
+addition = (a, b) => a + b;
+
+// Converted to an arrow function
+doubleAddition = (c, d)
+
+
+// // Simple JavaScript log statement
+// function printHello() {
+//     return "Hello there!";
+//   }
+
+// // Example of Fat ARROW function
+// printHello = () => "Hello there!";
