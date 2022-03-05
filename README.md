@@ -11,8 +11,7 @@
     Initially we need to create a new vairable that is capabale of holding the multiple filter information.  We achieved this by creating the empty filters variable using 'filters = {}'.
 
     Then we update the html document to incorporate the new filter fields; such as city, state, country and shape.  We removed the button that previously occupied the space beneath the date filter and included the code for the additional fields as seen below.
-
-    [Image of the filter fields from HTML]
+![Image of the filter fields from HTML](https://github.com/Gkmb2390/UFOs/blob/main/images/HTML%20updated%20code.png)
 
 # updateFilters Function Walkthrough
     Next we create a new function 'updateFilters' that will work through the multiple fields.  In order to recognize those fields that are changing we create the 'filterElem' variable, using 'let'.  We set the variable equal to the d3.select(this) - which recognizes changes that occur on the page.  
@@ -24,8 +23,7 @@
     Now we pass our 'filterValue' & 'filterId' through a simple if else statment.  Working through the statement we argure that if there is a filterValue that has been created; we update the 'filters' variable to include the ''filterId' as a key and set the value of that key equal to the 'filterValue' that has been created.  When the 'else' statement is triggered it removes the 'filterId' keys from the 'filters' variable, since it did not recognize a 'filterValue' in the first portion of the argument. 
 
     Lastly in this portion of the function we call the next function - which allows for the filtering of the table; aptly named the 'filterTable' function.  See the image below that depicts the sections of code described above.   
-
-    [Image of the Update Filters Function]
+![Image of the Update Filters Function](https://github.com/Gkmb2390/UFOs/blob/main/images/update%20filters%20code.png)
 
 # filterTable Function Walkthrough
 
@@ -35,12 +33,11 @@
 
     The next part was the most complex portion of the coding that gave me a great amount of difficulty.  We are asked to loop through our filters and see if any data in the filters fields matches data within the 'tableData'.
 
-    First we establish the filteredData as equal to the filteredData that is being filtered by the action '.filter'.  The value being filtered from our 'filteredData' is the function() with the item argument.  Inside the function of 'function(item)' we have created a for loop that works through the 'Key(s)' in our 'filters' variable from the very beginning of the excercise.  Inside that for loop we are checking to see if the item(i.e. key of the filters) is equivalent to a value of either 'undefined' or if it matches any of the 'filters' key(s) as a boolean operator (i.e. true or false).  Having converted the filter values into booleans we can then return those values that equal to true and false - which would be fed into our previous functions based on the if else statement outlined in the 'updateFilters' function.
+    First we establish the filteredData as equal to the filteredData that is being filtered by the action '.filter'.  The value being filtered from our 'filteredData' is the function() with the item argument.  Inside the function of 'function(item)' we have created a for loop that works through the 'Key(s)' in our 'filters' variable from the very beginning of the excercise.  Inside that for loop we are checking to see if the item(i.e. key of the filters) is equivalent to a value of either 'undefined' or if it does not match any of the 'filters' key(s) as a boolean operator (i.e. true or false).  Having converted the filter values into booleans we can then return those values that equal to true and false - which would be fed into our previous functions based on the if else statement outlined in the 'updateFilters' function.
 
     Having completed the loop, we return to one of the initial functions given to us at the beginning of the excercise - 'buildTable' - which is passed the argument of 'filteredData' - so that we can see the changes make to the filter enacted. 
 
-    [Image of the Filter table function]
-
+![Image of the Filter table function](https://github.com/Gkmb2390/UFOs/blob/main/images/Filter%20Table%20code.png)
 # Listening Events
 
     Similar to the module work we have to design an event listener for when changes are made to the document.  Previously we were able to focus our attention to the button ids found in the HTML - since we removed those items we need to change our listening event coding.  As shown in the Hint video for the Challenge; we can update our listening event by changing the text within the d3.selectAll statement.  Specifically updating the item we are looking/listening for as any type of 'input', when we hear the input has been pass we fire the 'on' portion of the statement which allows for the change to call the 'updateFilters function. 
